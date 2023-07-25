@@ -1,6 +1,7 @@
 package edu.kit.informatik;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,6 +46,7 @@ public class Execution {
      * used. the Needed Parameter is Used to create the map of the Game.
      * 
      * @param input - String-Array representing the Map of the Game.
+     * --> 5,5,A,+,L,+,D,+,A0,*,D0,+,L,*,d,*,L,+,C0,d,B0,+,C,+,L,+,B
      */
     public void start(String[] input) {
         createMatchField(input);
@@ -86,9 +88,13 @@ public class Execution {
      * @param args -Input Arguments.
      */
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Execution e = new Execution();
+        String value = scanner.nextLine();
+        String[] input = new String[1];
+        input[0] = value;
         try {
-            e.start(args);
+            e.start(input);
         } catch (GameExeption exeption) {
             Terminal.printError(exeption.getMessage());
 
