@@ -86,6 +86,7 @@ public class Execution {
      * The Main Method.
      * 
      * @param args -Input Arguments.
+     *  5,5,A,+,L,+,D,+,A0,*,D0,+,L,*,d,*,L,+,C0,d,B0,+,C,+,L,+,B
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
